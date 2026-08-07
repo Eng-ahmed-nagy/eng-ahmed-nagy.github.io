@@ -1,117 +1,1184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ahmed Nagy | Senior Creative Designer</title>
+<title>Ahmed Nagy — Senior Creative Designer & Creative Strategist</title>
+<meta name="description" content="Ahmed Nagy — Senior Creative Designer and Creative Strategist specializing in branding, advertising, social media, AI-powered visuals, photography and video content.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    color:#f5f5f2;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+::selection{
+    background:#b5c579;
+    color:#080808;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+    --bg:#080808;
+    --text:#f5f5f2;
+    --muted:#999999;
+    --line:#252525;
+    --accent:#b5c579;
+    --card:#101010;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+    padding:0 5vw;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:100;
+
+    background:rgba(8,8,8,.82);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:-.5px;
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.nav-links a{
+    color:#aaa;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.available{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.available-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 15px rgba(181,197,121,.7);
+}
+
+
+/* =========================
+   GLOBAL CONTAINER
+========================= */
+
+.container{
+    width:min(90%,1500px);
+    margin:auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    padding-top:150px;
+    padding-bottom:70px;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-grid{
+    width:100%;
+
+    display:grid;
+    grid-template-columns:1.45fr .55fr;
+    gap:70px;
+    align-items:end;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    color:#aaa;
+
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+
+    margin-bottom:35px;
+}
+
+.eyebrow-line{
+    width:45px;
+    height:1px;
+    background:var(--accent);
+}
+
+.hero h1{
+    font-size:clamp(75px,11vw,190px);
+    line-height:.78;
+
+    letter-spacing:-8px;
+    font-weight:700;
+}
+
+.hero h1 .green{
+    color:var(--accent);
+}
+
+.hero-right{
+    padding-bottom:12px;
+}
+
+.hero-description{
+    font-size:clamp(18px,1.5vw,24px);
+    line-height:1.5;
+    color:#bbb;
+    max-width:510px;
+}
+
+.hero-description strong{
+    color:white;
+    font-weight:500;
+}
+
+.hero-actions{
+    display:flex;
+    gap:14px;
+    margin-top:35px;
+}
+
+.btn{
+    padding:15px 24px;
+
+    border:1px solid #333;
+
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:#080808;
+    border-color:var(--accent);
+}
+
+.btn-primary:hover{
+    background:white;
+    border-color:white;
+}
+
+.btn-secondary:hover{
+    border-color:#777;
+}
+
+
+/* =========================
+   HERO BOTTOM
+========================= */
+
+.hero-bottom{
+    margin-top:90px;
+
+    padding-top:25px;
+
+    border-top:1px solid var(--line);
+
+    display:flex;
+    justify-content:space-between;
+
+    color:#666;
+
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:130px 0;
+}
+
+.section-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    margin-bottom:60px;
+}
+
+.section-label{
+    color:var(--accent);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    font-size:clamp(45px,6vw,90px);
+    letter-spacing:-4px;
+    line-height:.95;
+
+    margin-top:15px;
+}
+
+.section-count{
+    color:#555;
+    font-size:13px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+    border-top:1px solid var(--line);
+}
+
+.project{
+    display:grid;
+    grid-template-columns:100px 1fr 1fr 50px;
+
+    gap:30px;
+    align-items:center;
+
+    min-height:180px;
+
+    border-bottom:1px solid var(--line);
+
+    transition:.35s;
+
+    position:relative;
+}
+
+.project:hover{
+    padding-left:20px;
+    background:#0e0e0e;
+}
+
+.project-number{
+    color:#555;
+    font-size:12px;
+}
+
+.project-name{
+    font-size:clamp(30px,4vw,65px);
+    letter-spacing:-2px;
+}
+
+.project-info{
+    color:#777;
+    font-size:13px;
+    line-height:1.8;
+    text-transform:uppercase;
+    letter-spacing:.8px;
+}
+
+.project-arrow{
+    font-size:28px;
+    color:#555;
+    transition:.3s;
+}
+
+.project:hover .project-arrow{
+    color:var(--accent);
+    transform:translateX(7px);
+}
+
+
+/* =========================
+   CAPABILITIES
+========================= */
+
+.capabilities{
+    background:#0d0d0d;
+}
+
+.cap-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0 80px;
+
+    border-top:1px solid var(--line);
+}
+
+.cap-item{
+    display:grid;
+    grid-template-columns:60px 1fr;
+
+    padding:35px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+.cap-number{
+    color:#555;
+    font-size:11px;
+}
+
+.cap-item h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.cap-item p{
+    color:#777;
+    line-height:1.6;
+    font-size:14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:100px;
+}
+
+.about-big{
+    font-size:clamp(35px,4.3vw,70px);
+    line-height:1.08;
+    letter-spacing:-3px;
+}
+
+.about-big span{
+    color:var(--accent);
+}
+
+.about-copy{
+    max-width:620px;
+}
+
+.about-copy p{
+    color:#999;
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:22px;
+}
+
+.stats{
+    margin-top:55px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    border-top:1px solid var(--line);
+}
+
+.stat{
+    padding-top:25px;
+}
+
+.stat strong{
+    display:block;
+    font-size:35px;
+    color:white;
+}
+
+.stat span{
+    color:#666;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+    background:var(--accent);
+    color:#080808;
+}
+
+.experience .section-label{
+    color:#080808;
+}
+
+.experience .section-title{
+    max-width:900px;
+}
+
+.experience-copy{
+    margin-top:50px;
+
+    max-width:700px;
+
+    font-size:20px;
+    line-height:1.6;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    min-height:75vh;
+
+    display:flex;
+    align-items:center;
+}
+
+.contact h2{
+    font-size:clamp(60px,10vw,160px);
+    letter-spacing:-7px;
+    line-height:.82;
+}
+
+.contact h2 span{
+    color:var(--accent);
+}
+
+.contact-copy{
+    margin-top:45px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    border-top:1px solid var(--line);
+
+    padding-top:30px;
+}
+
+.contact-copy p{
+    color:#777;
+    max-width:450px;
+    line-height:1.6;
+}
+
+.contact-email{
+    font-size:18px;
+    border-bottom:1px solid #555;
+    padding-bottom:5px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid var(--line);
+
+    padding:30px 5vw;
+
+    display:flex;
+    justify-content:space-between;
+
+    color:#555;
+
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+
+    animation:reveal .8s forwards;
+}
+
+.delay1{animation-delay:.15s;}
+.delay2{animation-delay:.3s;}
+.delay3{animation-delay:.45s;}
+
+@keyframes reveal{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        height:75px;
     }
 
-    body {
-      background: #0a0a0a;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
+    .nav-links a{
+        display:none;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 8vw;
+    .nav-links .available{
+        display:flex;
     }
 
-    .eyebrow {
-      color: #a3a3a3;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
+    .hero{
+        padding-top:130px;
     }
 
-    h1 {
-      font-size: clamp(60px, 10vw, 160px);
-      line-height: 0.9;
-      letter-spacing: -5px;
-      max-width: 1400px;
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:55px;
     }
 
-    .accent {
-      color: #b5c579;
+    .hero h1{
+        letter-spacing:-5px;
     }
 
-    .description {
-      max-width: 700px;
-      margin-top: 45px;
-      color: #b8b8b8;
-      font-size: 20px;
-      line-height: 1.6;
+    .hero-bottom{
+        gap:20px;
+        flex-wrap:wrap;
     }
 
-    .details {
-      display: flex;
-      gap: 40px;
-      margin-top: 50px;
-      color: #777;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .project{
+        grid-template-columns:45px 1fr 30px;
+        padding:30px 0;
     }
 
-    @media (max-width: 700px) {
-      .hero {
-        padding: 30px;
-      }
-
-      h1 {
-        letter-spacing: -3px;
-      }
-
-      .description {
-        font-size: 17px;
-      }
-
-      .details {
-        flex-direction: column;
-        gap: 10px;
-      }
+    .project-info{
+        display:none;
     }
-  </style>
+
+    .cap-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .contact-copy{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:35px;
+    }
+}
+
+@media(max-width:550px){
+
+    .container{
+        width:88%;
+    }
+
+    section{
+        padding:90px 0;
+    }
+
+    .hero h1{
+        font-size:21vw;
+        letter-spacing:-4px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .contact h2{
+        letter-spacing:-4px;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <main class="hero">
 
-    <p class="eyebrow">
-      Senior Creative Designer • Creative Strategist
-    </p>
+<!-- NAVIGATION -->
 
-    <h1>
-      AHMED<br>
-      <span class="accent">NAGY.</span>
-    </h1>
+<nav>
 
-    <p class="description">
-      I build visual identities, advertising campaigns and digital content
-      that connect creative thinking with business goals.
-    </p>
-
-    <div class="details">
-      <span>10+ Years Experience</span>
-      <span>Branding</span>
-      <span>Advertising</span>
-      <span>AI Creative</span>
-      <span>Video</span>
+    <div class="logo">
+        AHMED <span>NAGY</span>
     </div>
 
-  </main>
+    <div class="nav-links">
+
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#contact">Contact</a>
+
+        <div class="available">
+            <div class="available-dot"></div>
+            Available for remote work
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container">
+
+    <div class="hero-grid">
+
+        <div>
+
+            <div class="eyebrow reveal">
+                <div class="eyebrow-line"></div>
+                Senior Creative Designer & Creative Strategist
+            </div>
+
+            <h1 class="reveal delay1">
+                AHMED<br>
+                <span class="green">NAGY.</span>
+            </h1>
+
+        </div>
+
+
+        <div class="hero-right reveal delay2">
+
+            <p class="hero-description">
+                I turn <strong>strategy into visual experiences</strong>
+                through branding, advertising, social content,
+                photography, video and AI-powered creative.
+            </p>
+
+            <div class="hero-actions">
+
+                <a class="btn btn-primary" href="#work">
+                    Explore my work
+                </a>
+
+                <a class="btn btn-secondary" href="#contact">
+                    Let's talk
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-bottom reveal delay3">
+
+        <span>10+ Years Experience</span>
+        <span>Branding</span>
+        <span>Advertising</span>
+        <span>Photography</span>
+        <span>AI Creative</span>
+        <span>Video</span>
+
+    </div>
+
+</div>
+
+</header>
+
+
+
+<!-- SELECTED WORK -->
+
+<section id="work">
+
+<div class="container">
+
+    <div class="section-top">
+
+        <div>
+            <div class="section-label">Selected Work</div>
+            <h2 class="section-title">
+                Projects that<br>tell the story.
+            </h2>
+        </div>
+
+        <div class="section-count">
+            Selected projects / 2024—2026
+        </div>
+
+    </div>
+
+
+    <div class="projects">
+
+
+        <div class="project">
+
+            <div class="project-number">01</div>
+
+            <div class="project-name">
+                MO Group
+            </div>
+
+            <div class="project-info">
+                E-commerce Creative<br>
+                Product Photography · AI · Social · Video
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <div class="project-number">02</div>
+
+            <div class="project-name">
+                Trust Level
+            </div>
+
+            <div class="project-info">
+                Brand & Digital Campaign<br>
+                Branding · Social · Ads · AI Video
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <div class="project-number">03</div>
+
+            <div class="project-name">
+                Science Academy
+            </div>
+
+            <div class="project-info">
+                Education Content<br>
+                Social · Photography · Video
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <div class="project-number">04</div>
+
+            <div class="project-name">
+                Power Store
+            </div>
+
+            <div class="project-info">
+                Product Advertising<br>
+                Design · Photography · AI · Video
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <div class="project-number">05</div>
+
+            <div class="project-name">
+                الرياضة ببساطة
+            </div>
+
+            <div class="project-info">
+                Educational Brand<br>
+                Branding · Advertising · AI Video
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <div class="project-number">06</div>
+
+            <div class="project-name">
+                B-Fit
+            </div>
+
+            <div class="project-info">
+                Fitness Brand<br>
+                Branding · Advertising
+            </div>
+
+            <div class="project-arrow">↗</div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- CAPABILITIES -->
+
+<section class="capabilities" id="capabilities">
+
+<div class="container">
+
+    <div class="section-top">
+
+        <div>
+            <div class="section-label">Capabilities</div>
+
+            <h2 class="section-title">
+                From strategy<br>to execution.
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="cap-grid">
+
+
+        <div class="cap-item">
+
+            <div class="cap-number">01</div>
+
+            <div>
+                <h3>Creative Strategy</h3>
+                <p>
+                    Turning business objectives and audience insights
+                    into clear creative directions and campaign ideas.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cap-item">
+
+            <div class="cap-number">02</div>
+
+            <div>
+                <h3>Branding & Visual Identity</h3>
+                <p>
+                    Logo design, visual systems, brand direction
+                    and consistent communication across touchpoints.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cap-item">
+
+            <div class="cap-number">03</div>
+
+            <div>
+                <h3>Advertising & Social</h3>
+                <p>
+                    Creative campaigns and social media content
+                    designed around audiences, platforms and goals.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cap-item">
+
+            <div class="cap-number">04</div>
+
+            <div>
+                <h3>Photography</h3>
+                <p>
+                    Product and commercial photography focused on
+                    strong visual presentation and brand storytelling.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cap-item">
+
+            <div class="cap-number">05</div>
+
+            <div>
+                <h3>AI Creative</h3>
+                <p>
+                    AI-assisted visual production and prompt engineering
+                    integrated into professional creative workflows.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cap-item">
+
+            <div class="cap-number">06</div>
+
+            <div>
+                <h3>Video Editing</h3>
+                <p>
+                    Short-form advertising, social content and
+                    promotional video production.
+                </p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+    <div class="about-grid">
+
+        <div>
+
+            <div class="section-label">
+                About
+            </div>
+
+            <h2 class="about-big">
+                More than a designer.
+                <span>A creative problem solver.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="about-copy">
+
+            <p>
+                I'm Ahmed Nagy, a multidisciplinary creative professional
+                with more than a decade of experience working across
+                design, branding, advertising and digital content.
+            </p>
+
+            <p>
+                My work combines creative thinking with practical
+                marketing experience — from understanding a client's
+                challenge and building the direction, to producing the
+                visual content that brings it to life.
+            </p>
+
+            <p>
+                I work across static design, photography, video and
+                AI-powered creative workflows, with a focus on producing
+                work that is both visually strong and commercially relevant.
+            </p>
+
+
+            <div class="stats">
+
+                <div class="stat">
+                    <strong>10+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+                <div class="stat">
+                    <strong>06</strong>
+                    <span>Core Disciplines</span>
+                </div>
+
+                <div class="stat">
+                    <strong>360°</strong>
+                    <span>Creative Thinking</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+<div class="container">
+
+    <div class="section-label">
+        How I Work
+    </div>
+
+    <h2 class="section-title">
+        Think strategically.<br>
+        Create visually.<br>
+        Deliver with purpose.
+    </h2>
+
+    <p class="experience-copy">
+        I can take a project from the initial client conversation
+        and marketing direction through concept development,
+        design, photography, video and advertising creative —
+        keeping the idea consistent from strategy to execution.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+    <div class="section-label">
+        Let's work together
+    </div>
+
+    <h2>
+        HAVE A<br>
+        PROJECT<span>?</span>
+    </h2>
+
+
+    <div class="contact-copy">
+
+        <p>
+            Currently open to remote opportunities, creative collaborations
+            and ambitious projects.
+        </p>
+
+        <a class="contact-email" href="mailto:your@email.com">
+            your@email.com ↗
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <span>© 2026 Ahmed Nagy</span>
+
+    <span>
+        Senior Creative Designer & Creative Strategist
+    </span>
+
+</footer>
+
 
 </body>
 </html>
