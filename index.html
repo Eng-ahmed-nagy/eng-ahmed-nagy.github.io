@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ahmed Nagy | Senior Creative Designer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8vw;
+    }
+
+    .eyebrow {
+      color: #a3a3a3;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(60px, 10vw, 160px);
+      line-height: 0.9;
+      letter-spacing: -5px;
+      max-width: 1400px;
+    }
+
+    .accent {
+      color: #b5c579;
+    }
+
+    .description {
+      max-width: 700px;
+      margin-top: 45px;
+      color: #b8b8b8;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .details {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      color: #777;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 30px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .description {
+        font-size: 17px;
+      }
+
+      .details {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="hero">
+
+    <p class="eyebrow">
+      Senior Creative Designer • Creative Strategist
+    </p>
+
+    <h1>
+      AHMED<br>
+      <span class="accent">NAGY.</span>
+    </h1>
+
+    <p class="description">
+      I build visual identities, advertising campaigns and digital content
+      that connect creative thinking with business goals.
+    </p>
+
+    <div class="details">
+      <span>10+ Years Experience</span>
+      <span>Branding</span>
+      <span>Advertising</span>
+      <span>AI Creative</span>
+      <span>Video</span>
+    </div>
+
+  </main>
+
+</body>
+</html>
