@@ -511,16 +511,19 @@ footer{
 .gallery-item img{
     display:block;
     width:100%;
-    height:100%;
-    object-fit:cover;
+    height:auto;
+    object-fit:contain;
 }
 
 .gallery-item-large img{
-    aspect-ratio:16 / 7;
+    width:100%;
+    height:auto;
 }
 
 .gallery-item:not(.gallery-item-large) img{
-    aspect-ratio:4 / 5;
+    width:100%;
+    height:auto;
+}
 }
 
 @media(max-width:768px){
