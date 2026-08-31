@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MO Group — Ahmed Nagy Portfolio</title>
+<meta name="description" content="MO Group case study by Ahmed Nagy — E-commerce creative, product photography, social media, AI creative and video.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --bg:#080808;
+    --text:#f5f5f2;
+    --muted:#999999;
+    --line:#252525;
+    --accent:#b5c579;
+    --card:#101010;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+::selection{
+    background:var(--accent);
+    color:var(--bg);
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+    padding:0 5vw;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:100;
+
+    background:rgba(8,8,8,.82);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:-.5px;
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.back-link{
+    color:#aaa;
+    transition:.3s;
+}
+
+.back-link:hover{
+    color:white;
+}
+
+.available{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.available-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 15px rgba(181,197,121,.7);
+}
+
+/* GLOBAL */
+
+.container{
+    width:min(90%,1500px);
+    margin:auto;
+}
+
+/* PROJECT HERO */
+
+.project-hero{
+    min-height:100vh;
+    padding-top:170px;
+    padding-bottom:70px;
+
+    display:flex;
+    align-items:center;
+}
+
+.project-topline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding-bottom:30px;
+    border-bottom:1px solid var(--line);
+
+    color:#777;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.project-number{
+    color:var(--accent);
+}
+
+.project-title{
+    margin-top:65px;
+
+    font-size:clamp(80px,13vw,210px);
+    line-height:.75;
+    letter-spacing:-10px;
+    font-weight:700;
+}
+
+.project-title span{
+    color:var(--accent);
+}
+
+.project-intro{
+    margin-top:85px;
+
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:100px;
+    align-items:end;
+}
+
+.project-description{
+    max-width:760px;
+
+    font-size:clamp(22px,2.1vw,34px);
+    line-height:1.35;
+
+    color:#aaa;
+    letter-spacing:-1px;
+}
+
+.project-description strong{
+    color:white;
+    font-weight:500;
+}
+
+.project-meta{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px 45px;
+}
+
+.meta-item{
+    border-top:1px solid var(--line);
+    padding-top:15px;
+}
+
+.meta-label{
+    display:block;
+
+    color:#555;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    margin-bottom:9px;
+}
+
+.meta-value{
+    color:#ccc;
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* DISCIPLINES */
+
+.disciplines{
+    margin-top:75px;
+    padding-top:25px;
+
+    border-top:1px solid var(--line);
+
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+
+    color:#666;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+/* VISUAL PLACEHOLDER */
+
+.visual-section{
+    padding:0 0 130px;
+}
+
+.hero-visual{
+    min-height:70vh;
+
+    background:#101010;
+    border:1px solid var(--line);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-visual::before{
+    content:"";
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    background:var(--accent);
+    filter:blur(180px);
+    opacity:.08;
+
+    border-radius:50%;
+}
+
+.visual-placeholder{
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+    color:#555;
+
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.visual-placeholder strong{
+    display:block;
+
+    color:#777;
+    font-size:13px;
+    font-weight:400;
+
+    margin-bottom:10px;
+}
+
+/* OVERVIEW */
+
+.overview{
+    padding:130px 0;
+    border-top:1px solid var(--line);
+}
+
+.overview-grid{
+    display:grid;
+    grid-template-columns:.6fr 1.4fr;
+    gap:100px;
+}
+
+.section-label{
+    color:var(--accent);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.overview-copy h2{
+    font-size:clamp(45px,5vw,80px);
+    line-height:.95;
+    letter-spacing:-4px;
+
+    max-width:850px;
+}
+
+.overview-copy p{
+    color:#888;
+    font-size:17px;
+    line-height:1.8;
+
+    max-width:750px;
+    margin-top:40px;
+}
+
+/* NEXT SECTION */
+
+.case-coming{
+    padding:130px 0;
+    background:#0d0d0d;
+}
+
+.case-coming h2{
+    margin-top:20px;
+
+    font-size:clamp(50px,7vw,110px);
+    line-height:.9;
+    letter-spacing:-5px;
+}
+
+.case-coming h2 span{
+    color:var(--accent);
+}
+
+.case-coming p{
+    margin-top:35px;
+
+    max-width:650px;
+
+    color:#777;
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid var(--line);
+
+    padding:30px 5vw;
+
+    display:flex;
+    justify-content:space-between;
+
+    color:#555;
+
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* ANIMATION */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    animation:reveal .8s forwards;
+}
+
+.delay1{animation-delay:.15s;}
+.delay2{animation-delay:.3s;}
+.delay3{animation-delay:.45s;}
+
+@keyframes reveal{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        height:75px;
+    }
+
+    .available{
+        display:none;
+    }
+
+    .project-hero{
+        padding-top:130px;
+    }
+
+    .project-title{
+        letter-spacing:-6px;
+    }
+
+    .project-intro{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .overview-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+}
+
+@media(max-width:550px){
+
+    .container{
+        width:88%;
+    }
+
+    .project-title{
+        font-size:22vw;
+        letter-spacing:-4px;
+    }
+
+    .project-description{
+        font-size:22px;
+    }
+
+    .project-meta{
+        grid-template-columns:1fr;
+    }
+
+    .hero-visual{
+        min-height:55vh;
+    }
+
+    .overview,
+    .case-coming{
+        padding:90px 0;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:12px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        AHMED <span>NAGY</span>
+    </a>
+
+    <div class="nav-right">
+
+        <a href="index.html#work" class="back-link">
+            ← Back to work
+        </a>
+
+        <div class="available">
+            <div class="available-dot"></div>
+            Available for remote work
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- PROJECT HERO -->
+
+<header class="project-hero">
+
+<div class="container">
+
+    <div class="project-topline reveal">
+        <span class="project-number">01 / Selected Work</span>
+        <span>2024 — 2026</span>
+    </div>
+
+
+    <h1 class="project-title reveal delay1">
+        MO<br>
+        <span>GROUP.</span>
+    </h1>
+
+
+    <div class="project-intro reveal delay2">
+
+        <p class="project-description">
+            Building a <strong>product-driven visual presence</strong>
+            across e-commerce, social media and digital advertising.
+        </p>
+
+
+        <div class="project-meta">
+
+            <div class="meta-item">
+                <span class="meta-label">Client</span>
+                <div class="meta-value">MO Group</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Focus</span>
+                <div class="meta-value">E-commerce Creative</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Role</span>
+                <div class="meta-value">
+                    Creative Designer<br>
+                    & Content Creator
+                </div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Period</span>
+                <div class="meta-value">2024 — 2026</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="disciplines reveal delay3">
+        <span>Product Photography</span>
+        <span>Social Media</span>
+        <span>AI Creative</span>
+        <span>Video</span>
+        <span>E-commerce</span>
+    </div>
+
+</div>
+
+</header>
+
+
+<!-- MAIN VISUAL -->
+
+<section class="visual-section">
+
+<div class="container">
+
+    <div class="hero-visual">
+
+        <div class="visual-placeholder">
+            <strong>MO Group — Main Project Visual</strong>
+            Hero image will be added here
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECT OVERVIEW -->
+
+<section class="overview">
+
+<div class="container">
+
+    <div class="overview-grid">
+
+        <div>
+            <div class="section-label">
+                Project Overview
+            </div>
+        </div>
+
+
+        <div class="overview-copy">
+
+            <h2>
+                Creative built around
+                the product.
+            </h2>
+
+            <p>
+                My work with MO Group brings together product-focused
+                creative across e-commerce and social platforms — combining
+                commercial photography, visual design, AI-assisted creative
+                production and video content into a consistent digital presence.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- NEXT CONTENT PLACEHOLDER -->
+
+<section class="case-coming">
+
+<div class="container">
+
+    <div class="section-label">
+        The Work
+    </div>
+
+    <h2>
+        PRODUCT.<br>
+        SOCIAL.<br>
+        AI<span>.</span>
+    </h2>
+
+    <p>
+        The next sections will showcase selected product photography,
+        social media campaigns, AI-powered creative and video work
+        developed for MO Group.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <span>© 2026 Ahmed Nagy</span>
+
+    <span>
+        MO Group — Case Study
+    </span>
+
+</footer>
+
+</body>
+</html>
