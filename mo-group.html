@@ -235,21 +235,24 @@ nav{
 .visual-section{
     padding:0 0 130px;
 }
-
 .hero-visual{
     min-height:70vh;
-
     background:#101010;
     border:1px solid var(--line);
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     position:relative;
     overflow:hidden;
 }
 
+.hero-project-image{
+    width:100%;
+    height:70vh;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+    }
 .hero-visual::before{
     content:"";
     position:absolute;
@@ -558,11 +561,9 @@ footer{
 <div class="container">
 
     <div class="hero-visual">
-
-        <div class="visual-placeholder">
-            <strong>MO Group — Main Project Visual</strong>
-            Hero image will be added here
-        </div>
+<img src="assets/mo-group/hero-tumblers.webp"
+     alt="MO Group Product Photography and E-commerce Creative"
+     class="hero-project-image">
 
     </div>
 
